@@ -1,7 +1,7 @@
 # Flask Login Page Project 
 
 
-![Flask Authorisation App Demo](shortened.gif)
+![Flask Authorisation App Demo](flask-autho-appdemo.gif)
 
 ## Project Directory
 ```bash
@@ -187,4 +187,10 @@ def page_not_found(error):
 {% endblock %}
 ```
 
+## Troubleshooting `ModuleNotFoundError`
+**Go to the terminal**
+```bash
+$ pip install <package>
+$ pip3 install <package>
+```
 

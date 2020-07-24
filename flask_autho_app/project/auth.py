@@ -62,10 +62,10 @@ def signup_post():
 @auth.route('/logout')
 @login_required
 def logout():
-    login_user()
+    logout_user()
     return redirect(url_for('main.index'))
 
 # adding error page
-@app.errorhandler(404)
-def page_not_found(error):
-    return render_template('page_not_found.html'), 404
+# @app.errorhandler(404)
+# def page_not_found(error):
+#     return render_template('page_not_found.html'), 404
