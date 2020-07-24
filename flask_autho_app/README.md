@@ -34,6 +34,14 @@ $ auth/bin/activate
 (auth) $ pip install flask flask-sqlalchemy flask-login
 ```
 
+## Flask modules used for this project
+```python
+from flask import Blueprint, render_template, redirect, url_for, request, flash
+from sqlalchemy import SQLAlchemy
+from flask_login import login_user, logout_user, login_required
+from werkzeug.security import generate_password_hash, check_password_hash
+```
+
 ## Creating the Main App File 
 
 ```python
@@ -47,7 +55,7 @@ def create_app():
     app = Flask(__name__)
 
     app.config['SECRET_KEY'] = 'secret-key-goes-here'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite' # connect to local database
 
     db.init_app(app)
 
