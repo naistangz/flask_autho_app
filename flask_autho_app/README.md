@@ -196,4 +196,4 @@ $ pip3 install <package>
 
 ---
 
-This project was built using SQLite 3 with Flask, HTML, Bulma CSS and Bootstrap 
+This project was built using SQLite 3 with Flask, HTML, Bulma CSS, jQuery and Bootstrap 

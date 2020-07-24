@@ -1,7 +1,45 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Welcome, {{ name }}!
-</h1>
-{% endblock %}
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+  <body>
+    <h1 class="title">
+      Welcome, {{ name }}!
+    </h1>
+    <div class="alert">
+</div>
+
+<div class="container">
+
+	<h2>Is python statically or dynamically typed?</h2>
+
+  <ul>
+
+  <li>
+    <input type="radio" id="s-option" name="selector">
+    <label for="s-option">Static</label>
+
+    <div class="check"><div class="inside"></div></div>
+  </li>
+
+  <li>
+    <input type="radio" id="t-option" name="selector">
+    <label for="t-option">Dynamic</label>
+
+    <div class="check"><div class="inside"></div></div>
+  </li>
+</ul>
+</div>
+
+
+
+
+  </body>
+
+  {% endblock %}
+
