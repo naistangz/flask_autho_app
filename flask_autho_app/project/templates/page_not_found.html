@@ -2,13 +2,15 @@
 
 {% block title %}Page Not Found{% endblock %}
 
-{% block main %}
+{% block content %}
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
+</head>
   <h1 class="title">Page Not Found</h1>
   <p class="lead">We couldn't find what you are looking for. Come visit the homepage :)</p>
   <p>
     <!--syntax for code-->
-    <a href="{{ url_for('project.index') }}"><button class="btn btn-primary my-2">Home</button></a>
+    <a href="{{ url_for('main.index') }}"><button type="button" class="btn btn-light">Home</button></a>
   </p>
 {% endblock %}
