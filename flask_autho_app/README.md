@@ -5,7 +5,7 @@
 
 ## Project Directory
 ```bash
-└── flask_auth_app
+└── flask_autho_app
     └── project
         ├── __init__.py       # initialising app and db with Blueprint and SQLAlchemy
         ├── auth.py           # auth routes for the app
