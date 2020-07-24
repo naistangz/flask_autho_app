@@ -196,3 +196,6 @@ $ pip install <package>
 $ pip3 install <package>
 ```
 
+---
+
+This project was built using SQLite 3 with Flask, HTML, Bulma CSS and Bootstrap 
