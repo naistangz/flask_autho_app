@@ -3,7 +3,7 @@
 
 ![Flask Authorisation App Demo](flask-auth.gif)
 
-**Project Directory**
+## Project Directory
 ```bash
 └── flask_auth_app
     └── project
