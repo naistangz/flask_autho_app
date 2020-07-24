@@ -1,5 +1,8 @@
 # Flask Login Page Project 
 
+
+![Flask Authorisation App Demo](flask-auth.gif)
+
 **Project Directory**
 ```bash
 └── flask_auth_app
@@ -133,6 +136,15 @@ def signup_post():
         return redirect(url_for('auth.signup'))
 ```
 
-**Using Jinja syntax**
+**Using Jinja syntax in HTML**
+```html
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div class="notification is-danger">
+        {{ messages[0] }}. Go to <a href="{{ url_for('auth.login') }}">login page</a>.
+    </div>
+{% endif %}
+{% endwith %}
+```
 
-![Flask Authorisation App Demo](flask_auth.mov)
+
