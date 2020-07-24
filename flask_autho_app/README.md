@@ -1,7 +1,7 @@
 # Flask Login Page Project 
 
 
-![Flask Authorisation App Demo](flask-auth.gif)
+![Flask Authorisation App Demo](shortened.gif)
 
 ## Project Directory
 ```bash
