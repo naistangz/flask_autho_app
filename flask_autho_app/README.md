@@ -76,7 +76,7 @@ python3
 >>> exit()
 ```
 
-**Run sqlite3**
+**Run sqlite3 to check the table has been created**
 ```bash
 sqlite3 project/db.sqlite
 sqlite> .tables
@@ -103,7 +103,11 @@ $ ps -fA | grep python
 - SQLAlchemy allows you to define the database schema in Python
 - The python code that defines your schema is called the model
     - The class represents the table `User` and inherits the initialised database
-    
+- SQLAlchemy also presents database relations in a Pythonic way:
+```python
+for e in User.email:
+    print(e.email, e.id)
+```
 
 ```python
 from flask_login import UserMixin
@@ -115,3 +119,20 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
 ```
+
+## Testing the Sign Up Method with flash messages 
+```python
+from flask import flash, redirect, url_for
+
+@auth.route('/signup', methods=['POST'])
+def signup_post():
+    
+    if user:
+    # if a user is found, it will redirect back to signup page so the user can try again 
+        flash('Email address already exists')
+        return redirect(url_for('auth.signup'))
+```
+
+**Using Jinja syntax**
+
+![Flask Authorisation App Demo](flask_auth.mov)
