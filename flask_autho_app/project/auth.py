@@ -4,7 +4,6 @@ from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 
-
 auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
@@ -64,6 +63,10 @@ def signup_post():
 def logout():
     logout_user()
     return redirect(url_for('main.index'))
+
+@auth.route('/404')
+def page_not_found():
+    return render_template('page_not_found.html')
 
 # adding error page
 @auth.errorhandler(404)
