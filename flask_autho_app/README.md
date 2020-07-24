@@ -21,11 +21,11 @@
 ```
 
 ## Installing relevant packages
-- Flask 
-- Flask-Login: to handle user sessions (the presence of a user with a specific IP address)  
+- **Flask**
+- **Flask-Login**: to handle user sessions (the presence of a user with a specific IP address)  
     - Sessions create a file in a temporary directory on the server where registered session variables and values (username, password) are stored
     - Cookies are stored in client-side machine
-- Flask-SQLAlchemy: to represent the user model and interface with the database
+- **Flask-SQLAlchemy**: to represent the user model and interface with the database
 
 ## Creating a python environment for our project directory 
 ```bash
