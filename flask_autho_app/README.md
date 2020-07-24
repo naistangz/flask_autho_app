@@ -155,4 +155,36 @@ def signup_post():
 {% endwith %}
 ```
 
+## Adding customised 404 Error Page (URL does not exist)
+```python
+from flask import FLask, render_template
+
+app = Flask(__name__)
+
+# python decorator to take error as a parameter
+@app.errorhandler(404)
+# defining function
+def page_not_found(error):
+    return render_template('page_not_found.html'), 404
+```
+
+**`page_not_found.html`**
+
+```html
+{% extends "base.html" %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block main %}
+
+
+  <h1 class="title">Page Not Found</h1>
+  <p class="lead">We couldn't find what you are looking for. Come visit the homepage :)</p>
+  <p>
+    <!--syntax for code-->
+    <a href="{{ url_for('project.index') }}"><button class="btn btn-primary my-2">Home</button></a>
+  </p>
+{% endblock %}
+```
+
 
