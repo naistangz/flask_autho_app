@@ -96,7 +96,7 @@ sqlite> .exit
 ```
 
 ## Adding Routes 
-- I used two blueprints: The [home page `(/)`](project/templates/index.html) and the [profile page `(/profile)`](project/templates/profile.html) for after logging in. If the user tries to access the profile page without logging in, they will be sent to the login route.
+I used two blueprints: The [home page `(/)`](project/templates/index.html) and the [profile page `(/profile)`](project/templates/profile.html) for after logging in. If the user tries to access the profile page without logging in, they will be sent to the login route.
 
 ## To run our app
 ```bash
