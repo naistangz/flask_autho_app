@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block main %}
+
+
+  <h1 class="title">Page Not Found</h1>
+  <p class="lead">We couldn't find what you are looking for. Come visit the homepage :)</p>
+  <p>
+    <!--syntax for code-->
+    <a href="{{ url_for('project.index') }}"><button class="btn btn-primary my-2">Home</button></a>
+  </p>
+{% endblock %}
