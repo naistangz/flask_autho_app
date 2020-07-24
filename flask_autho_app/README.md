@@ -168,7 +168,7 @@ def page_not_found(error):
     return render_template('page_not_found.html'), 404
 ```
 
-**`page_not_found.html`**
+[`page_not_found.html`](project/templates/page_not_found.html)
 
 ```html
 {% extends "base.html" %}
