@@ -66,6 +66,6 @@ def logout():
     return redirect(url_for('main.index'))
 
 # adding error page
-# @app.errorhandler(404)
-# def page_not_found(error):
-#     return render_template('page_not_found.html'), 404
+@auth.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html'), 404
